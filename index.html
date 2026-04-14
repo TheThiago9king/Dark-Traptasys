@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>DARK TRAPTASYS</title>
+
+<!-- 🏰 FUENTES MEDIEVALES -->
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;600&family=Orbitron:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+  margin: 0;
+  background: url("fondo.jpg") no-repeat center center fixed;
+  background-size: cover;
+  color: #8000ff;
+  text-align: center;
+  font-size: 18px;
+  font-family: 'Cinzel', serif;
+}
+
+/* overlay */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: -1;
+}
+
+/* 🏰 TITULO MEDIEVAL */
+.glitch {
+  margin-top: 50px;
+  font-size: 46px;
+  letter-spacing: 3px;
+  position: relative;
+  font-family: 'MedievalSharp', cursive;
+  color: #c9a0ff;
+  text-shadow: 0 0 10px #8000ff, 0 0 25px #4b0082;
+}
+
+.glitch::before,
+.glitch::after {
+  content: "DARK TRAPTASYS";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 0;
+  pointer-events: none;
+}
+
+.glitch::before {
+  color: red;
+  transform: translate(2px, -1px);
+  opacity: 0.25;
+}
+
+.glitch::after {
+  color: cyan;
+  transform: translate(-2px, -1px);
+  opacity: 0.25;
+}
+
+/* subtitulo */
+.subtitle {
+  margin-top: -10px;
+  font-size: 14px;
+  font-family: 'Cinzel', serif;
+  opacity: 0.8;
+}
+
+/* MENU */
+.menu button {
+  display: block;
+  margin: 25px auto;
+  padding: 18px 35px;
+  background: black;
+  border: 2px solid #8000ff;
+  color: #c9a0ff;
+  font-size: 18px;
+  cursor: pointer;
+  width: 80%;
+  max-width: 400px;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.menu button:hover {
+  background: #2a0033;
+  transform: scale(1.05);
+}
+
+/* SECCIONES */
+.section {
+  display: none;
+  padding: 25px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* IMAGENES */
+img {
+  width: 90%;
+  max-width: 350px;
+  margin: 15px auto;
+  display: block;
+  border: 2px solid #8000ff;
+  box-shadow: 0 0 20px #8000ff55;
+  border-radius: 6px;
+}
+
+/* 🎧 REPRODUCTOR MEDIEVAL */
+.audio-box {
+  margin: 20px auto;
+  padding: 15px;
+  width: 90%;
+  max-width: 420px;
+  background: rgba(20,0,30,0.6);
+  border: 2px solid #8000ff;
+  box-shadow: 0 0 15px #8000ff55;
+  border-radius: 10px;
+}
+
+.audio-title {
+  font-family: 'Cinzel', serif;
+  margin-bottom: 10px;
+  color: #c9a0ff;
+}
+
+audio {
+  width: 100%;
+  filter: sepia(1) hue-rotate(240deg) saturate(2);
+}
+</style>
+</head>
+
+<body>
+
+<h1 class="glitch">DARK TRAPTASYS</h1>
+<p class="subtitle">Jony</p>
+
+<div class="menu" id="menu">
+  <button onclick="show('album')">Escuchar álbum</button>
+  <button onclick="show('artes')">Ver artes</button>
+  <button onclick="show('historia')">Historia del álbum</button>
+  <button onclick="salir()">Salir</button>
+</div>
+
+<!-- 🎧 ÁLBUM -->
+<div id="album" class="section">
+  <h2>Álbum</h2>
+
+  <div class="audio-box">
+    <div class="audio-title">Track I</div>
+    <audio controls src="songs/song1.mp3"></audio>
+  </div>
+
+  <div class="audio-box">
+    <div class="audio-title">Track II</div>
+    <audio controls src="songs/song2.mp3"></audio>
+  </div>
+
+  <div class="audio-box">
+    <div class="audio-title">Track III</div>
+    <audio controls src="songs/song3.mp3"></audio>
+  </div>
+
+  <div class="audio-box">
+    <div class="audio-title">Track IV</div>
+    <audio controls src="songs/song4.mp3"></audio>
+  </div>
+
+  <div class="audio-box">
+    <div class="audio-title">Track V</div>
+    <audio controls src="songs/song5.mp3"></audio>
+  </div>
+
+  <div class="audio-box">
+    <div class="audio-title">Track VI</div>
+    <audio controls src="songs/song6.mp3"></audio>
+  </div>
+
+  <div class="audio-box">
+    <div class="audio-title">Track VII</div>
+    <audio controls src="songs/song7.mp3"></audio>
+  </div>
+
+  <div class="audio-box">
+    <div class="audio-title">Track VIII</div>
+    <audio controls src="songs/song8.mp3"></audio>
+  </div>
+
+  <div class="audio-box">
+    <div class="audio-title">Track IX</div>
+    <audio controls src="songs/song9.mp3"></audio>
+  </div>
+
+  <div class="audio-box">
+    <div class="audio-title">Track X</div>
+    <audio controls src="songs/song10.mp3"></audio>
+  </div>
+
+  <div class="audio-box">
+    <div class="audio-title">Track XI</div>
+    <audio controls src="songs/song11.mp3"></audio>
+  </div>
+
+  <div class="audio-box">
+    <div class="audio-title">Track XII</div>
+    <audio controls src="songs/song12.mp3"></audio>
+  </div>
+
+  <button onclick="back()">Volver</button>
+</div>
+
+<!-- ARTES -->
+<div id="artes" class="section">
+  <h2>Artes del Reino</h2>
+
+  <img src="images/art1.jpg">
+  <img src="images/art2.jpg">
+  <img src="images/art3.jpg">
+  <img src="images/art4.jpg">
+  <img src="images/art5.jpg">
+  <img src="images/art6.jpg">
+  <img src="images/art7.jpg">
+  <img src="images/art8.jpg">
+  <img src="images/art9.jpg">
+  <img src="images/art10.jpg">
+  <img src="images/art11.jpg">
+  <img src="images/art12.jpg">
+
+  <button onclick="back()">Volver</button>
+</div>
+
+<!-- HISTORIA -->
+<div id="historia" class="section">
+  <h2>Historia</h2>
+
+  <p>Traptasys fue consumido por la oscuridad hace siglos.</p>
+  <p>No fue destruido… fue olvidado.</p>
+  <p>Un caballero sin nombre recorre lo que queda.</p>
+  <p>El reino no es un lugar… es un eco roto.</p>
+  <p>El caballero no es visitante. Es parte del sistema.</p>
+  <p>El último sonido no debería existir.</p>
+  <p>Y cuando termina… todo reinicia.</p>
+
+  <br>
+  <b>Proyecto creado por Jonathan Álvarez y Thiago Michelotti, gracias</b>
+
+  <br><br>
+  <button onclick="back()">Volver</button>
+</div>
+
+<script>
+function show(section) {
+  document.getElementById("menu").style.display = "none";
+  document.getElementById(section).style.display = "block";
+}
+
+function back() {
+  document.querySelectorAll(".section").forEach(s => s.style.display = "none");
+  document.getElementById("menu").style.display = "block";
+}
+
+function salir() {
+  alert("No puedes escapar...");
+}
+</script>
+
+</body>
+</html>
